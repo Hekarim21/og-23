@@ -1,0 +1,84 @@
+--// GUI Setup
+local Player = game.Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = PlayerGui
+
+--// Background Frame
+local MainFrame = Instance.new("Frame")
+MainFrame.Parent = ScreenGui
+MainFrame.Size = UDim2.new(0, 300, 0, 200)
+MainFrame.Position = UDim2.new(1, -310, 1, -210) -- Prawy dolny róg
+MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainFrame.BorderSizePixel = 2
+MainFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+
+--// Title Label
+local Title = Instance.new("TextLabel")
+Title.Parent = MainFrame
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.Text = "Menu"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1
+Title.TextSize = 20
+Title.TextAlign = Enum.TextXAlignment.Center
+
+--// PVP Button
+local PVPButton = Instance.new("TextButton")
+PVPButton.Parent = MainFrame
+PVPButton.Size = UDim2.new(1, -20, 0, 40)
+PVPButton.Position = UDim2.new(0, 10, 0, 40)
+PVPButton.Text = "PVP"
+PVPButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PVPButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+PVPButton.TextSize = 18
+
+PVPButton.MouseButton1Click:Connect(function()
+    print("PVP Option Selected")
+    -- Dodaj tutaj kod do włączenia/wyłączenia PVP
+end)
+
+--// MISC Button
+local MiscButton = Instance.new("TextButton")
+MiscButton.Parent = MainFrame
+MiscButton.Size = UDim2.new(1, -20, 0, 40)
+MiscButton.Position = UDim2.new(0, 10, 0, 80)
+MiscButton.Text = "MISC"
+MiscButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MiscButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+MiscButton.TextSize = 18
+
+MiscButton.MouseButton1Click:Connect(function()
+    print("MISC Option Selected")
+    -- Dodaj tutaj kod do MISC, np. dodatkowe opcje
+end)
+
+--// Aimbot Button
+local AimbotButton = Instance.new("TextButton")
+AimbotButton.Parent = MainFrame
+AimbotButton.Size = UDim2.new(1, -20, 0, 40)
+AimbotButton.Position = UDim2.new(0, 10, 0, 120)
+AimbotButton.Text = "Aimbot"
+AimbotButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+AimbotButton.TextSize = 18
+
+AimbotButton.MouseButton1Click:Connect(function()
+    print("Aimbot Option Selected")
+    -- Włącz/Wyłącz aimbot
+end)
+
+--// WH Button (Wall Hack)
+local WHButton = Instance.new("TextButton")
+WHButton.Parent = MainFrame
+WHButton.Size = UDim2.new(1, -20, 0, 40)
+WHButton.Position = UDim2.new(0, 10, 0, 160)
+WHButton.Text = "WH"
+WHButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+WHButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+WHButton.TextSize = 18
+
+WHButton.MouseButton1Click:Connect(function()
+    print("WH Option Selected")
+    -- Włącz/Wyłącz wallhack
+end)
